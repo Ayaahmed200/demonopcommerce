@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="221.156">
+<testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="18.737">
+<system-out><![CDATA[Given user go to register page..............................................passed
+When user select gender type................................................passed
+And user enter first name "automation" and last name "tester"...............passed
+And user enter date of birth................................................passed
+And user enter email "ateet239101@example.com" field........................passed
+And user fills Password fields "P@ssw0rd" "P@ssw0rd"........................passed
+Then user clicks on register button.........................................passed
+And success message is displayed............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="9.2">
+<system-out><![CDATA[Given user go to login page.................................................passed
+When user login with "valid" "ateet239101@example.com" and "P@ssw0rd".......passed
+And user press on login button..............................................passed
+Then user login to the system successfully..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could not login with invalid email and password" time="8.777">
+<system-out><![CDATA[Given user go to login page.................................................passed
+When user login with "invalid" "wrong@example.com" and "P@ssw0rd"...........passed
+And user press on login button..............................................passed
+Then user could not login to the system.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03_currencies | user could select euro" name="user could select euro currency" time="8.308">
+<system-out><![CDATA[When user select Euro option................................................passed
+Then euro symbol is displayed on all products...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | user could search with product name" name="user could search with product name" time="11.091">
+<system-out><![CDATA[Given user clicks on search field...........................................passed
+When user search with "book"................................................passed
+Then user could find "book".................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | user could search with product name" name="user could search with product name 2" time="9.776">
+<system-out><![CDATA[Given user clicks on search field...........................................passed
+When user search with "laptop"..............................................passed
+Then user could find "laptop"...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | user could search with product name" name="user could search with product name 3" time="9.339">
+<system-out><![CDATA[Given user clicks on search field...........................................passed
+When user search with "nike"................................................passed
+Then user could find "nike".................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | user could search with product name" name="user could search with suku" time="10.134">
+<system-out><![CDATA[Given user clicks on search field...........................................passed
+When user search with "SCI_FAITH"...........................................passed
+Then user could find "SCI_FAITH" product....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | user could search with product name" name="user could search with suku 2" time="10.268">
+<system-out><![CDATA[Given user clicks on search field...........................................passed
+When user search with "APPLE_CAM"...........................................passed
+Then user could find "APPLE_CAM" product....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | user could search with product name" name="user could search with suku 3" time="9.973">
+<system-out><![CDATA[Given user clicks on search field...........................................passed
+When user search with "SF_PRO_11"...........................................passed
+Then user could find "SF_PRO_11" product....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F05_hoverCategories | user could hover and select sub_category" name="user could hover and select sub_category" time="8.319">
+<system-out><![CDATA[Given user hover on random category.........................................passed
+And select random sub_category..............................................passed
+Then open datail page and get the title.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F06_homeSlider | user could click on the slider on the home page" name="user could click on nokia slider on home page" time="9.923">
+<failure message="The following asserts failed:&#10;&#9;expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given user click on the "1" slider..........................................passed
+Then user could navigate to "nokia" page....................................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefs.D06_homeSlidersStepDef.userCouldNavigateToPage(D06_homeSlidersStepDef.java:25)
+	at ✽.user could navigate to "nokia" page(file:///C:/Users/aahmed200/Downloads/demonopcommerce/src/main/resources/features/F06_homeSliders.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="F06_homeSlider | user could click on the slider on the home page" name="user could click on iphone slider on home page" time="12.549">
+<failure message="The following asserts failed:&#10;&#9;expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given user click on the "2" slider..........................................passed
+Then user could navigate to "iphone" page...................................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefs.D06_homeSlidersStepDef.userCouldNavigateToPage(D06_homeSlidersStepDef.java:25)
+	at ✽.user could navigate to "iphone" page(file:///C:/Users/aahmed200/Downloads/demonopcommerce/src/main/resources/features/F06_homeSliders.feature:10)
+]]></failure>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens facebook link" time="14.332">
+<system-out><![CDATA[When user opens facebook link...............................................passed
+Then "https://www.facebook.com/nopCommerce" is opened in new tab............passed
+And user could open and navigate to "https://twitter.com/nopCommerce" tab...passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens twitter link" time="11.645">
+<system-out><![CDATA[When user opens twitter link................................................passed
+Then "https://twitter.com/nopCommerce" is opened in new tab.................passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens rss link" time="12.364">
+<failure message="expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]" type="java.lang.AssertionError"><![CDATA[When user opens rss link....................................................passed
+Then "https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab.failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefs.D07_followUsStepDef.isOpenedInNewTab(D07_followUsStepDef.java:62)
+	at ✽."https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab(file:///C:/Users/aahmed200/Downloads/demonopcommerce/src/main/resources/features/F07_followUs.feature:15)
+]]></failure>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens youtube link" time="11.83">
+<system-out><![CDATA[When user opens youtube link................................................passed
+Then "https://www.youtube.com/user/nopCommerce" is opened in new tab........passed
+]]></system-out>
+</testcase>
+<testcase classname="F08_Wishlist | users could add product to wishlist" name="user add product to Wishlist" time="8.509">
+<system-out><![CDATA[Given user click on product to add to wishlist button.......................passed
+Then user could find success alert..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F08_Wishlist | users could add product to wishlist" name="user navigate to whishlist page" time="25.524">
+<system-out><![CDATA[Given user click on product to add to wishlist button.......................passed
+When navigate to whishlist page.............................................passed
+Then user could count product quantity......................................passed
+]]></system-out>
+</testcase>
+</testsuite>
